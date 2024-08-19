@@ -8,8 +8,49 @@ const port =process.env.PORT;
 app.listen(port,() => console.log(`listening on port ${port}`));
 
 
+//get request
+
+app.get('/', (req, res) => {
+    
+  res.status(200).json({ msg: 'Welcome Basilst' });
+});
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// post request 
+/*
+app.post('/login', (req, res) => {
+  const { username, password } = req.body;
+
+  // here you should check if the username and password match with your database
+  // and return a JWT token if they do
+
+  // For the purpose of this example, let's assume that the username and password are correct
+  if (username === 'admin' && password === 'password') {
+    const payload = { username };
+    const accessToken = jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' });
+
+    res.status(200).json({ accessToken });
+  } else {
+    res.status(401).json({ message: 'Invalid username or password.' });
+  }
+});
+
+
+*/
 
 
 
